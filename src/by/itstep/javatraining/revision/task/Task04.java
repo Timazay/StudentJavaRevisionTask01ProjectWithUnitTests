@@ -26,6 +26,18 @@ package by.itstep.javatraining.revision.task;
 
 public class Task04 {
     public static int start(int number) {
-        return 0;
+        int result;
+        if (number < 0) {
+            number = -number;
+        }
+
+        if (number < 100) {
+            result = 0;
+        } else if (number < 1000) {
+            result = number / 100;
+        } else {
+            result = (number / 100) % 10;
+        }
+        return result;
     }
 }

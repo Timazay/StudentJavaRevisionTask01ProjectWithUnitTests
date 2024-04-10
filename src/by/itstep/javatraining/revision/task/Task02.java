@@ -30,6 +30,16 @@ package by.itstep.javatraining.revision.task;
 
 public class Task02 {
     public static int start(int seeker, int coin) {
-        return 0;
+
+        if (seeker <= 0 || coin <= 0) {
+            return -1;
+        }
+
+        int result = coin % seeker;
+
+        if (seeker > coin) {
+            result = coin;
+        }
+        return result;
     }
 }
